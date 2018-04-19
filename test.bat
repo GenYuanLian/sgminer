@@ -14,6 +14,6 @@ del *.bin
 
 
 
-kernel\sgminer.exe --no-submit-stale --kernel Lyra2h  -o stratum+tcp://hpp.jkpool.com:3003 -u djm34.1 -p password -w 16 -I 16
+kernel\sgminer.exe --no-submit-stale --kernel Lyra2Z  -o stratum+tcp://119.29.66.233:9332 -u youraddress -p connToNoded -w 16 -I 18
 
 pause
