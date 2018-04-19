@@ -3,7 +3,7 @@
  * Copyright 2011-2013 Con Kolivas
  * Copyright 2011-2012 Luke Dashjr
  * Copyright 2010 Jeff Garzik
- *
+ * Copyright 2015-2018 GenYuanLian 
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the Free
  * Software Foundation; either version 3 of the License, or (at your option)
@@ -6802,7 +6802,9 @@ static void gen_stratum_work(struct pool *pool, struct work *work)
   // For Neoscrypt use set_target_neoscrypt() function
   if (pool->algorithm.type == ALGO_NEOSCRYPT) {
     set_target_neoscrypt(work->target, work->sdiff, work->thr_id);
-  } else {
+  } else if(pool->algorithm.type == ALGO_LYRA2Z){
+    set_target_neoscrypt(work->target, work->sdiff*256.0, work->thr_id);
+  }else {
     calc_midstate(work);
     set_target(work->target, work->sdiff, pool->algorithm.diff_multiplier2, work->thr_id);
   }
@@ -7837,6 +7839,8 @@ static void hash_sole_work(struct thr_info *mythr)
 
     if (work->pool->algorithm.type == ALGO_NEOSCRYPT)
       set_target_neoscrypt(work->device_target, work->device_diff, work->thr_id);
+    else if(work->pool->algorithm.type == ALGO_LYRA2Z)
+	   set_target_neoscrypt(work->device_target, work->device_diff*256.0, work->thr_id);
     else if (work->pool->algorithm.type == ALGO_ETHASH) {
       double mult = 60e6;
       work->device_diff = MIN(work->work_difficulty, mult);
