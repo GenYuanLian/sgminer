@@ -41,6 +41,22 @@ Note that **most of the documentation is outdated or incomplete**. If
 you want to contribute, fork this repository, update as needed, and
 submit a pull request.
 
+For more information, [Please visit here.](http://genyuanlian-docs.readthedocs.io "genyuanlian-docs")
+
+Contact Developers
+-------------------------
+
+Developers are available at:
+
+| Label Name              | Description                                                                                                                                                                                                                                                               |
+| :---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Gitter                  | [![Join the chat at https://gitter.im/genyuanlian-SourceBlockchain/Lobby](https://badges.gitter.im/genyuanlian-SourceBlockchain/Lobby.svg)](https://gitter.im/genyuanlian-SourceBlockchain/sgminer?utm_source=share-link&utm_medium=link&utm_campaign=share-link) |
+
+Issues & PRs management
+-------------------------
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/GenYuanLian/sgminer.svg?columns=all)](https://waffle.io/GenYuanLian/sgminer)               
+
+[![Throughput Graph](https://graphs.waffle.io/GenYuanLian/sgminer/throughput.svg)](https://waffle.io/GenYuanLian/sgminer/metrics/throughput) 
 
 ## Building
 
@@ -470,3 +486,7 @@ For example (this is wrapped, but it's all on one line for real):
     000000004a4366808f81d44f26df3d69d7dc4b3473385930462d9ab707b50498
     f681634a4f1f63d01a0cd43fb338000000000080000000000000000000000000
     0000000000000000000000000000000000000000000000000000000080020000
+
+LICENSE
+-------------------------
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
